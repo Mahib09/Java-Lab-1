@@ -6,7 +6,6 @@ public class app {
         System.out.println("Brampton Hamburgers");
         int choice;
         double grandtotal = 0;
-        double total = 0;
         double tax = 0.13;
         double subtotal = 0;
         double veggieBurger = 5.95;
@@ -85,10 +84,10 @@ public class app {
                 }
             }
             subtotal = subtotal * tax + subtotal;
-            if (subtotal > 50) {
-                subtotal = total - total * discount1;
-            } else if (subtotal > 100) {
-                subtotal = total - total * discount2;
+            if (subtotal >= 50 && subtotal<=99) {
+                subtotal = subtotal - subtotal * discount1;
+            } else if (subtotal >= 100) {
+                subtotal = subtotal - subtotal * discount2;
             }
             grandtotal = subtotal + grandtotal;
 
